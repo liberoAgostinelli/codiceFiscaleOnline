@@ -193,7 +193,7 @@ function trovaCodice(provincia, arrProvincia, cod_citta){
     provincia = provincia.toUpperCase();
 
     for (let i = 0; i <= arrProvincia.length; i++){
-        if( arrProvincia[i] === "NAPOLI"){
+        if( arrProvincia[i] === provincia){
             return cod_citta[i];
         }
     }
