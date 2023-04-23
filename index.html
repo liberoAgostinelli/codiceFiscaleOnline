@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Codice Fiscale</title>
+</head>
+<body>
+    <div id="main" class="dispFlex">
+
+        <div id="wrapForm" class="dispFlex">
+            <h1 id="TitoloCodiceFiscale">Calcolo Codice Fiscale Online</h1>
+            <div id="wrapCampi">
+                <div id="wrapCognome">
+                    <span id="spanCognome">COGNOME</span>
+                    <input type="text" name="" id="inputCognome" placeholder="Inserisci">
+                </div>
+    
+                <div id="wrapNomeSesso">
+                    <span id="spanNome">NOME</span>
+                    <input type="text" name="" id="inputNome" placeholder="Inserisci">
+                    <label for="sesso">SESSO</label>
+                    <select name="sesso" id="sesso">
+                        <option value="M">M</option>
+                        <option value="S">S</option>
+                    </select>
+                </div>
+
+                <div id="wrapNascita">
+                    <span id="spanNascita">LUOGO DI<br>NASCITA</span>
+                    <input type="text" name="" id="inputLuogoNascita" placeholder="Inserisci">
+                </div>
+
+                <div id="wrapData" class="dispFlex">
+                    <span id="spanProvincia">DATA</span>
+                    <input type="date" id="data">
+                </div>
+            </div>
+            <div id="calcoloCodice" class="dispFlex">
+                <span>CF: </span>
+                <textarea name="" id="textAreaCF" cols="40" rows="1" readonly></textarea>
+                
+                <button id="copiaCF" class="classBtn">Copia</button>
+            </div>
+            <div id="wrapBtnCalcola">
+                <button id="calcola" class="classBtn">Calcola</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

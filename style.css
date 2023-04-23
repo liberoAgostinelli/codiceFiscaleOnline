@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+option{
+    overflow: scroll;
+}
+textarea{
+    padding: 5px;
+    resize: none;
+    width: 200px;
+    height: 20px;
+    font-size: 16px;
+    margin: 0 15px;
+}
+span{
+    font-size: 20px;
+    font-weight: 600;
+}
+select{
+    font-size: 20px;
+    /* font-weight: 600; */
+}
+input[type="text"]{
+    height: 26px;
+    font-size: 20px;
+}
+input[type="text"]::placeholder{
+    opacity: 0;
+}
+
+/* Classi Generiche */
+
+.dispFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.classBtn{
+    cursor: pointer;
+    width: 5rem;
+    height: 2rem;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+/* Elementi */
+#main{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img_office.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+#wrapForm{
+    box-shadow: 0px 0px 10px 5px black;
+    flex-direction: column;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.656);
+}
+
+#TitoloCodiceFiscale{
+    padding: 20px;
+}
+
+#wrapCampi{
+    margin-bottom: 20px;
+}
+
+#wrapCognome{
+    margin-bottom: 20px;
+}
+#wrapNomeSesso{
+    margin-bottom: 20px;
+}
+
+#wrapNascita{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#wrapData{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Span */
+#spanCognome{
+    padding-right: 10px;
+}
+
+#spanNome{
+    padding-right: 55px;
+}
+
+#spanNascita{
+    padding-right: 20px;
+}
+
+#spanProvincia{
+    padding-right: 10px;
+}
+
+/* input */
+#inputCognome{
+    width: 300px;
+    height: 26px;
+}
+#inputLuogoNascita{
+    width: 300px;
+}
+#inputProvincia{
+    width: 25px;
+    margin-right: auto;
+}
+#inputTime{
+    cursor: pointer;
+}
+
+#calcoloCodice{
+    margin-bottom: 20px;
+}
+
+#wrapBtnCalcola{
+    margin-bottom: 20px;
+}
+
+
+@media (max-width : 1024px) {
+
+    #TitoloCodiceFiscale{
+        font-size: 22px;
+    }
+    #wrapForm{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #wrapCampi{
+        display: flex;
+        flex-direction: column;
+    }
+    #wrapCognome{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #wrapNomeSesso{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #wrapNascita{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #calcoloCodice{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    input[type="text"]{
+        background: rgba(255, 255, 255, 0.109);
+        border: none;
+        border-bottom: 1px solid black;
+        width: 300px;
+    }
+    input[type="text"]::placeholder{
+        color: rgb(225, 223, 223);
+        opacity: 1;
+    }
+    #inputNome{
+        margin-bottom: 10px;
+    }
+    textarea{
+        margin-bottom: 20px;
+    }
+    #spanNome{
+        padding-right: 0;
+    }
+    #spanCognome{
+        padding-right: 0;
+    }
+    #spanNascita{
+        padding-right: 0;
+    }
+}
