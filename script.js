@@ -78,6 +78,8 @@ calcola.addEventListener('click', ()=>{
     let s = sesso.value;
     let LuogoNascita = inputLuogoNascita.value;
     let d = data.value;
+
+    let codiceCat = trovaCodice(LuogoNascita, arrProvincia, cod_citta);
     
     // Una serie di if else per evidenziare i campi mancanti
     if(cognome.length === 0){
@@ -95,17 +97,23 @@ calcola.addEventListener('click', ()=>{
     }else{
         inputLuogoNascita.style.border = "";
     }
+    if(codiceCat === -1){
+      inputLuogoNascita.style.border = "2px solid red";
+  }else{
+      inputLuogoNascita.style.border = "";
+  }
     if(d.length === 0){
         data.style.border = "2px solid red";
     }else{
         data.style.border = "";
     }
+    
 
     /* 
       if che viene eseguita solo se tutti i campi sono stati riempiti
        e chiama tutte le funzioni per fare il calcolo 
     */
-    if(cognome.length !== 0 && nome.length !== 0 && LuogoNascita.length !== 0 && d.length !== 0){
+    if(cognome.length !== 0 && nome.length !== 0 && LuogoNascita.length !== 0 && d.length !== 0 && codiceCat !== -1){
         //console.log("Est cognome: " + estraiConsonati(cognome));
         //console.log("Es nome: " + estraiConsonati(nome));
 
@@ -137,7 +145,7 @@ calcola.addEventListener('click', ()=>{
           nascita e i due arrai quello della provincia e quello dove ci sono i codici
           i due array si trovano nel file cod_citta.js e vangono importati tramite i moduli
         */
-        codiceFiscale += trovaCodice(LuogoNascita, arrProvincia, cod_citta);
+        codiceFiscale += codiceCat;
 
         //console.log(charPari(codiceFiscale));
 
